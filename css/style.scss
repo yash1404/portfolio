@@ -1,0 +1,590 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+html,body{
+  font-size:10px;
+}
+html{
+  scroll-behavior: smooth;
+}
+$headingfont:'Cormorant Garamond', serif;
+$parafont:'DM Sans', sans-serif;
+$mybgcolor:#2ce6d5;
+$onhovercolor:#0da6a4;
+
+ #header{
+  width:100%;
+  height:60px;
+  background-color:$mybgcolor;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  
+
+}
+
+.logo{
+  border:2px solid black;
+  border-radius:50%;
+  padding:10px;
+}
+.insidelogo{
+  font-size:3rem;
+}
+.tooglebtn{
+  display:none;
+}
+.menulist{
+  display:flex;
+}
+.menulist li{
+  margin-right:15px;
+  list-style:none;
+}
+.menulist li a{
+  color:black;
+  text-decoration:none;
+  font-size:2rem;
+  transition:all 0.5s ease-in;
+  padding:5px;
+
+}
+.menulist li a:hover {
+  background-color:$onhovercolor; 
+  color:white;
+  border-radius:20px;
+}
+@media only screen and (max-width:768px)
+{
+  #header{
+    
+    display:flex;
+    justify-content:space-between;
+    padding-left:20px;
+
+  } 
+.menulist{
+  position:absolute;
+  top:9%;
+  left:0%;
+  background-color:$mybgcolor;
+  display:block;
+  width:100%;
+  padding:20px 0px;
+  text-align:center;
+  z-index:100;
+  display:none;
+
+}
+.menulist li{
+  margin-top:10px;
+}
+
+.tooglebtn{
+  display:block;
+}
+.tooglebtn span{
+  font-size:2.5rem;
+  margin-right:5px;
+}
+.tooglebtn p{
+  display:inline-block;
+  font-size:2.5rem;
+  margin-right:10px;
+}
+
+}
+/* banner section */
+#banner{
+  width:100%;
+  height:80vh;
+  background-image:url(../img/banner2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+.myinfo{
+  width:80%;
+  margin:0 auto;
+  position:relative;
+  top:25%;
+  text-align:center;
+
+}
+.myinfo p{
+  font-size:5rem;
+  color:white;
+  font-family:$headingfont;
+  font-weight:700;
+  z-index:99;
+}
+.myinfo a button{
+  margin-top:20px;
+  color:black;
+  background-color:$mybgcolor;
+  border:none;
+  padding:10px 5px ;
+  text-decoration:none;
+  border-radius:50px;
+  cursor:pointer;
+  font-size:2rem;
+  transition:all 0.5s ease;
+&:hover{
+  background-color:$onhovercolor;
+  color:white;
+  transform:rotate(360deg)
+}
+}
+@media only screen and (max-width:550px){
+  .myinfo{
+    position:relative;
+    top:20%;
+  }
+  .myinfo p{
+    font-size:3rem;
+  }
+  .myinfo a button{
+    font-size:1.5rem; 
+}
+}
+
+
+
+
+/* about section */
+@mixin samething{
+  width:100%;
+  height:auto;
+background-color:black;
+background-attachment: fixed; 
+}
+#About{
+@include samething;
+}
+.image{
+  margin-top:80px;
+  width:320px;
+  height:320px;
+  box-shadow:5px 5px 5px gray;
+
+}
+.image img {
+  width:320px;
+  height:320px;
+}
+.myself{
+  margin-top:80px;
+}
+
+.myself p{
+  color:white;
+  font-size:2rem;
+  font-family:$parafont;
+  text-align:justify;
+  text-transform:capitalize;
+}
+
+.myself a button{
+  border:none;
+  background-color:$mybgcolor;
+  padding:10px 10px;
+  font-size:1.5rem;
+  margin-top:20px;
+  font-weight:700px;
+  border-radius:20px;
+  &:hover{
+    background-color:$onhovercolor;
+    color:white;
+  }
+}
+@media only screen and (max-width:991px){
+  .image{
+ 
+    width:280px;
+    height:280px;
+  }
+  .image img {
+    width:280px;
+    height:280px;
+  }
+  #About{
+    height:100vh;
+  }
+ 
+  .myself{
+    margin-top:80px;
+  }
+  
+  .myself p{ 
+    font-size:1.5rem;
+  
+  }
+  
+ 
+}
+@media only screen and (max-width:768px){
+  #About .image{
+ display:inline-block;
+ text-align:center;
+    width:250px;
+    height:250px;
+    margin-top:50px;
+  } 
+ 
+  .image img {
+    width:250px;
+    height:250px;
+  }
+  #About{
+    height:auto;
+  }
+ 
+  .myself{
+    margin-top:50px;
+  }
+  
+  .myself p{ 
+    font-size:1.5rem;
+  
+  }
+  
+ 
+}
+@media only screen and (max-width:325px){
+  .image{
+ 
+    width:200px;
+    height:200px;
+    margin-top:40px;
+  }
+  .image img {
+    width:200px;
+    height:200px;
+  }
+  #About{
+    height:100vh;
+  }
+ 
+  .myself{
+    margin-top:30px;
+  }
+  
+  .myself p{ 
+    font-size:1.5rem;
+  
+  }
+}
+
+/* service section*/
+#Service{
+ width:100%;
+ height:auto;
+ background-color:black;
+ 
+
+}
+ .toped{
+  font-size:4rem;
+  color:$mybgcolor;
+  text-transform:capitalize;
+  position:relative;
+  top:80px;
+  overflow:hidden;
+  text-align:center;
+  font-family: $headingfont;
+}
+.commonthing{
+  background-color:rgb(52, 243, 243);
+  padding:20px;
+  border:2px solid white;
+  margin-top:90px;
+  
+
+}
+.commonthing h1{
+  color:black;
+  text-transform:capitalize;
+  font-size:2rem;
+  margin-bottom:10px;
+}
+.commonthing p{
+  color:black;
+  text-transform:capitalize;
+  text-align:justify;
+  font-size:1.8rem;
+
+}
+.commonthing a{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  color:white;
+  margin-top:10px;
+ 
+
+}
+
+.commonthing a h2 {
+  background-color:black;
+  border-radius:20px;
+padding:10px 10px;
+}
+.commonthing a span {
+ color:black;
+  margin-left:2px;
+  font-size:2rem;
+  transition:all 1s ease;
+animation-name:moveleft;
+animation-duration:0.8s;
+animation-delay:0.2s;
+animation-direction: alternate;
+animation-iteration-count: infinite;
+}
+@keyframes moveleft{
+  0%{
+    margin-left:2px;
+  }
+  100%{
+    margin-left:12px;
+  }
+}
+@media only screen and (max-width:768px){
+  #Service{
+    width:100%;
+    height:auto;
+    background-color:black;
+    
+   
+   }
+   .toped{
+     font-size:3rem;
+     text-align:center;
+   }
+}
+
+/* skills section*/
+#Skill{
+  background-color:black;
+  height:auto;
+  width:100%;
+  padding-bottom:10px;
+}
+.skillhead h2{
+  text-align:center;
+  color:$mybgcolor;
+  font-size:4rem;
+  font-family: $headingfont;
+  font-weight:600;
+  text-transform: capitalize ;
+  position:relative;
+  top:70px;
+}
+label{
+  color:white;
+  font-size:2rem;
+
+}
+.progressing{
+  width:100%;
+  height:20px;
+  border:2px solid white;
+  padding:0px;
+
+}
+.progressor{
+  background-color:$mybgcolor;
+  height:16px;
+  font-size:1.5rem;
+  font-weight:600;
+  text-align:center;
+}
+.marginaltop{
+  margin-top:70px;
+}
+
+@media only screen and (max-width:400px){
+  .skillhead h2{
+   
+    font-size:3rem;
+    
+  }
+}
+/* work section*/
+#Work{
+  background-color:black;
+  height:auto;
+  width:100%;
+}
+.workhead h2{
+color:$mybgcolor;
+text-align:center;
+position:relative;
+top:50px;
+font-size:4rem;
+font-family:$headingfont;
+text-transform:capitalize;
+
+}
+.owl-carousel{
+  margin-top:60px;
+}
+.owl-carousel .item img{
+  height:300px;
+  width:100%;
+}
+
+.owl-carousel .item button {
+  border:none;
+  background-color:$mybgcolor;
+  font-size:2rem;
+  margin-top:10px;
+  border-radius:10px;
+  padding:5px;
+  &:hover{
+    cursor:pointer;
+  }
+}
+.owl-carousel .item i{
+font-size:2rem;
+color:white;
+
+animation-name:moveleft;
+animation-duration:0.8s;
+animation-delay:0.2s;
+animation-direction: alternate;
+animation-iteration-count: infinite;
+}
+@keyframes moveleft{
+  0%{
+    margin-left:2px;
+  }
+  100%{
+    margin-left:12px;
+  }
+}
+@media only screen and (max-width:480px){
+  .workhead h2{
+   
+    font-size:3rem;
+    
+  }
+}
+
+// contact section
+#Contact {
+  background-color:black;
+  width:100%;
+  height:60vh;
+}
+.contacthead h2{
+  text-align:center;
+  color:$mybgcolor;
+  font-size:4rem;
+  position:relative;
+  top:80px;
+
+}
+.address,.phone,.email{
+  margin-top:100px;
+  text-align:center;
+}
+.address span,.phone span,.email span{
+  border-radius:10px;
+  padding:20px;
+  background-color:$mybgcolor;
+}
+.fa-map-marker,.fa-phone,.fa-envelope{
+ border-radius:50%;
+ background-color:$mybgcolor;
+  color:white;
+}
+.address h1{
+  font-size:2rem;
+  font-weight:700;
+  color:white;
+
+}
+.address address{
+  font-size:2rem;
+  color:white;
+  margin-top:20px;
+  text-transform:capitalize;
+}
+.phone h1 ,.email h1 {
+color:white;
+font-size:2rem;
+font-weight:700;
+
+}
+.phone p,.email p{
+color:white;
+font-size:2.5rem;
+margin-top:20px;
+}
+
+.relativity{
+  height:50px;
+  width:50px;
+  background-color:$onhovercolor;
+  position:relative;
+  left:5px;
+  bottom:30%;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ animation:moveup 2s ease-in-out alternate infinite;
+ 
+}
+@keyframes moveup{
+  0%{
+bottom:80px;
+  }
+  100%{
+    bottom:100px;
+  }
+}
+.relativity a span{
+  color:rgb(0, 0, 0);
+}
+
+@media only screen and (max-width:992px){
+  #Contact {
+    background-color:black;
+    width:100%;
+    height:auto;
+  }
+}
+@media only screen and (max-width:768px){
+  #Contact {
+    background-color:black;
+    width:100%;
+    height:auto;
+    padding-bottom:20px;
+  }
+
+}
+
+
+//footer section
+.footer{
+  background-color:$onhovercolor;
+  width:100%;
+  height:7vh;
+
+}
+.infotain{
+ 
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  
+}
+.infotain p{
+  position:relative;
+  top:20px;
+  font-weight:600;
+  font-size:1rem;
+}
